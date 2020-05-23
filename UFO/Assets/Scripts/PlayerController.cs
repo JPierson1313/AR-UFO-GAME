@@ -9,21 +9,20 @@ public class PlayerController : MonoBehaviour
     public GameObject player;
     public GameObject Thrusters;
     public bool isDead;
-
     public ScoreSystem ss;
 
-    public GameObject gameOverCanvas;
-
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = gameObject;
         ss = GameObject.FindGameObjectWithTag("SS").GetComponent<ScoreSystem>();
+        ss.score = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         if (!isDead)
         {
             if (Input.GetMouseButtonDown(0))
@@ -40,7 +39,6 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject)
         {
             isDead = true;
-            gameOverCanvas.SetActive(true);
         }
     }
 

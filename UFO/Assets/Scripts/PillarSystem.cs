@@ -10,17 +10,19 @@ public class PillarSystem : MonoBehaviour
     public float pillarMoveForce;
 
     public PlayerController pc;
+    public GameObject gameOverScreen;
 
     // Start is called before the first frame update
     void Start()
     {
-        pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!pc.isDead)
+        pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        if (!pc.isDead)
         {
             GameObject pillar;
             countDownTimer -= Time.deltaTime;
@@ -32,6 +34,10 @@ public class PillarSystem : MonoBehaviour
                 pillar.transform.parent = gameObject.transform;
                 countDownTimer = 1.1f;
             }
+        }
+        else
+        { 
+            gameOverScreen.SetActive(true);
         }
     }
 }

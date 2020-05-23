@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - SS
+  - GO
+  - Image
+  - Pillar
+  - PS
+  - BS
   layers:
   - Default
   - TransparentFX

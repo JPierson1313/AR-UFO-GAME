@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class ScoreSystem : MonoBehaviour
 {
@@ -9,8 +9,8 @@ public class ScoreSystem : MonoBehaviour
     public int highScore = 0;
     string highScoreKey = "HighScore";
 
-    public Text scoreText;
-    public Text highScoreText;
+    public TextMeshPro scoreText;
+    public TextMeshPro highScoreText;
 
     // Start is called before the first frame update
     void Start()
