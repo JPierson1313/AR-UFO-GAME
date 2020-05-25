@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1647767022981104854}
   - component: {fileID: 1647767022981104848}
   - component: {fileID: 1647767022981104849}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Truster (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 1647767023827994330}
   - component: {fileID: 1647767023827994331}
   - component: {fileID: 1647767023827994328}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Truster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,7 +166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1647767024375414632}
   - component: {fileID: 1647767024375414635}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Thrusters
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 1647767024494528891}
   - component: {fileID: 1647767024494528888}
   - component: {fileID: 1647767024494528836}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: UFO_Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ Transform:
   m_GameObject: {fileID: 1647767024494528889}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.70710677}
   m_LocalPosition: {x: -0.7375, y: 0, z: 0.12500004}
-  m_LocalScale: {x: 0.30000004, y: 0.30000028, z: 1}
+  m_LocalScale: {x: 0.225, y: 0.225, z: 1}
   m_Children:
   - {fileID: 1647767024375414632}
   m_Father: {fileID: 0}
@@ -331,5 +331,3 @@ MonoBehaviour:
   Thrusters: {fileID: 1647767024375414633}
   isDead: 0
   ss: {fileID: 0}
-  gameOverCanvas: {fileID: 6166815577723448319, guid: 24dc1789f06a0b24fbce384d796dc323,
-    type: 3}

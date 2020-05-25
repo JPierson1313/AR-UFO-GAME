@@ -12,6 +12,8 @@ public class PillarSystem : MonoBehaviour
     public PlayerController pc;
     public GameObject gameOverScreen;
 
+    public float hMin;
+    public float hMax;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +30,7 @@ public class PillarSystem : MonoBehaviour
             countDownTimer -= Time.deltaTime;
             if(countDownTimer < 0)
             {
-                Vector2 spawnPos = new Vector2(transform.position.x, Random.Range(-2.15f, 2.15f));
+                Vector2 spawnPos = new Vector2(transform.position.x, Random.Range(hMin, hMax));
                 pillar = Instantiate(pillars, spawnPos, transform.rotation) as GameObject;
                 pillar.GetComponent<Rigidbody>().velocity = new Vector2(-pillarMoveForce, 0);
                 pillar.transform.parent = gameObject.transform;

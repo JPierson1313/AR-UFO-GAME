@@ -9,6 +9,7 @@ public class GameOverSystem : MonoBehaviour
     public GameObject player;
     public GameObject imageTarget;
     public GameObject pillarSpawner;
+    public GameObject playerSpawner;
 
     private void OnEnable()
     {
@@ -28,7 +29,7 @@ public class GameOverSystem : MonoBehaviour
                 Destroy(pillar[i]);
             }
 
-            GameObject UFO = Instantiate(player, new Vector3(-2.95f, 0.5f, 0), transform.rotation);
+            GameObject UFO = Instantiate(player, playerSpawner.transform.position, transform.rotation);
             UFO.transform.parent = imageTarget.transform;
             bestScore.SetActive(false);
 
