@@ -24,7 +24,15 @@ public class PillarSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        //If pc is null, then we find the player game object that contains the PlayerController script
+        if(pc == null)
+        {
+            pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        }
+        
+        //if isDead false, then we start a countdown timer where if it's less than zero, to instaniate a pillar game object at the spawner's x position with a random y position
+        //We then set the pillar's velocity to a negative force and set it's parent to this game object so it'll stay attach due to being in AR
+        //After that, we restart the timer to a fixed time to start the process over again
         if (!pc.isDead)
         {
             GameObject pillar;
@@ -38,8 +46,10 @@ public class PillarSystem : MonoBehaviour
                 countDownTimer = 1.1f;
             }
         }
+        
         else
-        { 
+        {
+            //However, if isDead is true, then we set gameOverScreen game object to active
             gameOverScreen.SetActive(true);
         }
     }
