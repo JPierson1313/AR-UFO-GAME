@@ -5,15 +5,16 @@ using UnityEngine;
 public class PillarSystem : MonoBehaviour
 {
     [Header("Pillar Systems")]
-    public GameObject pillars;
-    public float countDownTimer;
-    public float pillarMoveForce;
+    public GameObject pillars; //Pillar game object
+    public float countDownTimer; //Countdown timer used to spawn in new pillars
+    public float pillarMoveForce; //Force needed to intially move the pillars
 
-    public PlayerController pc;
-    public GameObject gameOverScreen;
+    public PlayerController pc; //PlayerController script
+    public GameObject gameOverScreen; //Game Over Screen game object
 
-    public float hMin;
-    public float hMax;
+    public float hMin; //Minimum height for pillars being spawned in
+    public float hMax; //Maximum height for pillars being spawned in
+    
     // Start is called before the first frame update
     void Start()
     {
